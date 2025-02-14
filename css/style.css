@@ -1,0 +1,55 @@
+.grid{
+    display: grid;
+    grid-template-columns: 2% 3% 90% 3% 2%;
+
+}
+
+.grid img{
+    width: 100%;
+    height: auto;
+    /* padding: 5px; */
+    grid-column: 3;
+    transition: box-shadow 0.3s ease;
+}
+.grid img:hover{
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.grid img:focus {
+    outline: 2px solid #007bff;
+}
+
+@media (min-width: 750px) {
+    .grid{
+        display: grid;
+        grid-template-columns: 2% 44% 4% 44% 2%;
+    }
+
+    .grid img:nth-child(odd) {
+        grid-column: 2; 
+    }
+
+    .grid img:nth-child(even) {
+        grid-column: 4;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .grid img {
+        transition: none;
+    }
+}
+
+/* from last week */
+.grid img:nth-child(even){
+    border: 5px orange dashed; 
+}
+
+.item7{
+    grid-column: span 3;
+}
+
+.item1{
+    border: 5px green solid;
+    padding: 10px;
+}
